@@ -2,6 +2,5 @@
 <form action="">
   <input type="number" [formControl]="typedValue">
 </form>
-{{typedValue.value}}
 <app-regular-number [number]="typedValue.value ?? 0"></app-regular-number>
 <app-seven-segment-number [number]="typedValue.value ?? 0"></app-seven-segment-number>

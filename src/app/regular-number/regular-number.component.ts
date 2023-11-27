@@ -15,7 +15,6 @@ export class RegularNumberComponent {
   _number = signal<number>(0);
 
   @Input() set number(value: number){
-    console.log(value);
     this._number.set(value);
   }
 
@@ -27,7 +26,5 @@ export class RegularNumberComponent {
   second = computed(()=>{return this.getDigit(1)});
   third = computed(()=>{return this.getDigit(2)});
   forth = computed(()=>{return this.getDigit(3)});
-
-
 
 }

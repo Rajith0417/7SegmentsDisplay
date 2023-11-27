@@ -1,5 +1,12 @@
 <p>seven-segment-number works!</p>
-<app-seven-segment-digit [digit]=forth()></app-seven-segment-digit>
+<!-- <app-seven-segment-digit [digit]=forth()></app-seven-segment-digit>
 <app-seven-segment-digit [digit]=third()></app-seven-segment-digit>
 <app-seven-segment-digit [digit]=second()></app-seven-segment-digit>
-<app-seven-segment-digit [digit]=first()></app-seven-segment-digit>
+<app-seven-segment-digit [digit]=first()></app-seven-segment-digit> -->
+
+-{{digitsCount}}
+~{{segmentArr}}
+
+@for (item of segmentArr; track $index) {
+  <app-seven-segment-digit [digit]=item></app-seven-segment-digit>
+}
