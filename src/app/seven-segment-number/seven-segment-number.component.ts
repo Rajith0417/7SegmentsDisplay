@@ -1,7 +1,7 @@
 import { Component, Input, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SevenSegmentDigitComponent } from '../seven-segment-digit/seven-segment-digit.component';
-import { sevenSegmentInterface } from '../interfaces/sevenSegmentInterfece';
+
 @Component({
   selector: 'app-seven-segment-number',
   standalone: true,
@@ -17,6 +17,7 @@ export class SevenSegmentNumberComponent {
   segmentArr: number[] = [];
 
   @Input() set number(value: number){
+
     this._number.set(value);
     this.digitsCount = this.findDigits(value);
     this.modifyArray(this.digitsCount);
