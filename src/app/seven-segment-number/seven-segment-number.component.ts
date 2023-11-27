@@ -35,6 +35,12 @@ export class SevenSegmentNumberComponent {
   }
 
   modifyArray(value: number){
+
+    if (this.segmentArr.length > value) {
+      // Keep the last items and remove the rest
+      this.segmentArr = this.segmentArr.slice(-value);
+    }
+
     for (let index = 0; index < value; index++) {
       this.segmentArr[index] = computed(()=>{return this.getDigit(index)})();
     }
